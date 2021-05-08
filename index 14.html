@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="shape-1">element</div>
+    <div class="shape-1">element</div>
+    <div class="shape-1">element</div>
+    <div class="shape-2"></div>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            counter-reset: element-count;
+        }
+        .shape-1 {
+            position: relative;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            text-transform: capitalize;
+            align-items: center;
+            width: 100px;
+            height: 100px;
+            font-family: sans-serif;
+            font-weight: bold;
+            border-radius: 50%;
+            color: black;
+            border: 5px solid black;
+            box-shadow: -5px -5px 1px 1px #e91e63, 5px 5px 1px -1px #2196f3;
+        }
+        .shape-1::before {
+            counter-increment: element-count;
+            content: counter(element-count);
+            position: absolute;
+            background-color: black;
+            color: white;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            text-align: center;
+            padding: 2px;
+            top: -15px;
+        }
+        .shape-2 {
+            width: 100px;
+            height: 100px;
+            margin: 30px auto;
+            background-color: #EFEFEF;
+            box-shadow: 3px 4px 3px #8e8e8e inset, -3px -4px 5px #8e8e8e inset;
+            border-top-right-radius: 50px;
+            border-bottom-left-radius: 50px;
+            border-top-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+    </style>
+</body>
+</html>

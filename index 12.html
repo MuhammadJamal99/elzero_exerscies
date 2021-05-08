@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="green"></div>
+    <div class="red"></div>
+    <div class="blue"></div>
+    <div class="black"></div>
+    <section>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod, sed. Ea ipsum
+        similique quasi rem, fugiat voluptatibus reiciendis nam debitis earum quo veniam
+        laudantium mollitia atque! Laborum ea nam doloribus.
+        <span class="top-left">1</span>
+        <span class="bottom-left">2</span>
+        <span class="top-right">3</span>
+        <span class="bottom-right">4</span>
+    </section>
+    <ul class="main">
+        <li>
+            HTML
+            <ol start="10">
+                <li>Slim</li>
+                <li>Pugjs</li>
+                <li>HAML</li>
+            </ol>
+        </li>
+        <li>
+            CSS
+            <ol type="I" start="10">
+                <li>SASS</li>
+                <li>LESS</li>
+                <li>PostCSS</li>
+            </ol>
+        </li>
+        <li>
+            JavaScript
+            <ul>
+                <li>Vuejs</li>
+                <li>Sveltejs</li>
+            </ul>
+        </li>
+    </ul>
+    <table>
+        <thead>
+            <tr>
+                <th>avater</th>
+                <th>group</th>
+                <th>name</h>
+                <th>points</th>
+                <th>control</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><img src="./boy.jpg" alt="boy avater"/></td>
+                <td>ninja</td>
+                <td>ahmed mohamed</td>
+                <td>120</td>
+                <td>
+                    <a class="view">view</a>
+                    <a class="delete">delete</a>
+                </td>
+            </tr>
+            <tr>
+                <td><img src="./boy.jpg" alt="boy avater"></td>
+                <td rowspan= "2">shades</td>
+                <td>shady nabil</td>
+                <td>180</td>
+                <td>
+                    <a class="view">view</a>
+                    <a class="delete">delete</a>
+                </td>
+            </tr>
+            <tr>
+                <td><img src="./girl avater.jpg" alt="girl avater"/></td>
+                <td>eman mohamed</td>
+                <td>160</td>
+                <td>
+                    <a class="view">view</a>
+                    <a class="delete">delete</a>
+                </td>
+            </tr>
+            <tr>
+                <td><img src="./boy.jpg" alt="boy avater"></td>
+                <td rowspan="2">valhala</td>
+                <td>mohamed ibrahim</td>
+                <td>190</td>
+                <td>
+                    <a class="view">view</a>
+                    <a class="delete">delete</a>
+                </td>
+            </tr>
+            <tr>
+                <td><img src="./girl avater.jpg" alt="girl avater"/></td>
+                <td>noor atef</td>
+                <td>110</td>
+                <td>
+                    <a class="view">view</a>
+                    <a class="delete">delete</a>
+                </td>
+            </tr>
+            <tr>
+                <td><img src="./boy.jpg" alt="boy avater"></td>
+                <td>union</td>
+                <td>mahmoud adel</td>
+                <td>90</td>
+                <td>
+                    <a class="view">view</a>
+                    <a class="delete">delete</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <style>
+        table {
+            border-spacing: 2px;
+            text-transform: capitalize;
+            border-bottom: 2px solid #009688;
+        }
+        table th {
+            text-transform: capitalize;
+            text-align: center;
+        }
+        table thead th {
+            background-color: #404040;
+            color: white;
+            text-align: center !important;
+            padding: 15px 20px;
+            font-size: 20px;
+            font-weight: bold;
+            font-family: sans-serif;
+        }
+        table td {  
+            background-color: #eee;
+            border: 1px solid #DBDBDB;
+            text-align: center;
+            padding: 20px 30px;
+        }
+        table img {
+            width: 60px;
+            height: 60px;
+            margin: auto;
+        }
+        .view,.delete {
+            color: #F7F5FC;
+            padding: 5px 10px;
+            outline: none;
+            cursor: pointer;
+            font-size: 20px;
+            margin: 10px 10px;
+            text-transform: capitalize;
+        }
+        .view {
+            background-color: #03A9F4;
+        }
+        .delete {
+            background-color: #E91E63;
+        }
+        ul.main {
+            width: 400px;
+            margin: 50px auto;
+            padding: 40px;
+            background-color: #fff;
+            list-style-type: none;
+        }
+        ul.main li {
+            margin: 20px auto;
+            padding: 10px;
+            background-color: #eee;
+
+        }
+        ul.main ol li,
+        ul.main ul li  {
+            background-color: #fff;
+            padding: 10px;
+            margin: 5px auto;
+        }
+        ul.main ul {
+            list-style: inside;
+            list-style-type: circle;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        div {
+            height: 100px;
+            width: 100px;
+            position: absolute;
+        }
+        .green{
+            background-color: #009688;
+            z-index: 2;
+            top: 30px;
+            left: 30px;
+        }
+        .red {
+            background-color: #F44336;
+            z-index: 3;
+            top: 40px;
+            left: 40px;
+        }
+        .blue {
+            background-color:#03A9F4;
+            z-index: 1;
+            top: 20px;
+            left: 20px;
+        }
+        .black {
+            background-color: #333333;
+            z-index: 0;
+            top: 30px;
+            left: 20px;
+        }
+        section {
+            width: 400px;
+            margin: auto;
+            position: relative;
+            padding: 30px;
+            background-color: #eee;
+            line-height: 2;
+            border-style: solid;
+            font-weight: bold;
+            border-width: 5px;
+            margin-top: 30px;
+            border-top-color: #F44336;
+            border-right-color: #2196F3;
+            border-bottom-color: #F44336;
+            border-left-color: #2196F3;
+        }
+        span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 30px;
+            height: 20px;
+            color: #EEE;
+            background-color: #2196F3;
+            padding: 10px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #2196f3;
+            font-weight: bold;
+            position: absolute;
+        }
+        .top-left,
+        .bottom-left {
+            border-right-color: #F44336;
+        }
+        .top-right,
+        .bottom-right {
+            border-left-color: #F44336;
+        }
+        .top-left {
+            top: -28px;
+            left: -33px;
+        }
+        .bottom-left {
+            bottom: -25px;
+            left: -33px;
+        }
+        .top-right {
+            top: -28px;
+            right: -33px;
+        }
+        .bottom-right {
+            bottom: -25px;
+            right: -33px;
+        }
+
+    </style>
+</body>
+</html>

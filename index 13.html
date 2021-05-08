@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>One</div>
+    <div></div>
+    <div>Three</div>
+    <div class="first-letter">1 Hello, Welcome To Elzero Web School</div>
+    <p data-person="Osama" class="second">This Is Very Very Long Comment Number One</p>
+    <p data-person="Ahmed" class="second">This Is Very Very Long Comment Number Two</p>
+    <p data-person="Sayed" class="second">This Is Very Very Long Comment Number Three</p>
+    <div class="container">
+        <p class="third">This Is Very Very Long Product Title</p>
+        <p class="third">This Is Very Very Long Product Title</p>
+        <p class="third">This Is Very Very Long Product Title</p>
+        <p class="third">This Is Very Very Long Product Title</p>
+        <p class="third">This Is Very Very Long Product Title</p>
+        <p class="third">This Is Very Very Long Product Title</p>
+    </div>
+    <style>
+        div {
+            width: 300px;
+            height: 60px;
+            margin: 20px auto;
+            color: black;
+            background-color: #eee;
+            text-align: center;
+            font-size: 15px;
+            font-weight: bold;
+            font-family: sans-serif;
+        }
+        div:empty {
+            background-color: red;
+        }
+        .first-letter::first-letter {
+            color: white;
+            background-color: red;
+            padding: 8px;
+            margin-left: -13px;
+        }
+        .second::before {
+            position: absolute;
+            content: attr(data-person);
+            display: block;
+            height: 20px;
+            width: 49px;
+            background-color: #eee;
+            color: black;
+            left: -115px;
+            padding: 18px;
+            top: 0px;
+        }
+        .second {
+            position: relative;
+            width: 400px;
+            height: 25px;
+            padding: 15px;
+            margin: 20px auto;
+            color: black;
+            background-color: #eee;
+            text-align: center;
+            border-left-width: 5px;
+            border-left-style: solid ;
+            border-left-color: #E91E63;
+        }
+        .second::after {            
+            content: "";
+            position: absolute;
+            left: 0;
+            border-width: 10px;
+            border-style: solid;
+            border-color: transparent #E91E63 transparent transparent;
+            margin-left: -25px;
+        }
+        .container {
+            counter-reset: element-count;
+        }
+        .container .third::before {
+            counter-increment: element-count;
+            content: counter(element-count);
+            position: absolute;
+            display: block;
+            font-size: 20px;
+            font-weight: bold;
+            height: 20px;
+            width: 30px;
+            background-color: #F44336;
+            color: #fff;
+            left: -67px;
+            padding: 18px;
+            top: 0px;
+            text-align: center;
+        }
+        .container .third {
+            position: relative;
+            width: 450px;
+            height: 25px;
+            padding: 15px;
+            margin: 20px auto;
+            color: black;
+            background-color: #eee;
+            text-align: left;
+            font-size: 20px;
+            font-family: sans-serif;
+        }
+        .container .third::after {
+            content: "";
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 5px;
+            height: 100%;
+            background-color: #F44336;
+        }
+    </style>
+</body>
+</html>

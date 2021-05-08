@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section class="container">
+        <div class="full">Full width</div>
+        <span class="clear"></span>
+        <div class="triple">1/3</div>
+        <div class="triple">1/3</div>
+        <div class="triple">1/3</div>
+        <span class="clear"></span>
+        <div class="half">1/2</div>
+        <div class="half">1/2</div>
+        <span class="clear"></span>
+        <div class="qarter">1/4</div>
+        <div class="qarter">1/4</div>
+        <div class="qarter">1/4</div>
+        <div class="qarter">1/4</div>
+        <span class="clear"></span>
+    </section>
+    <div class="normal">Normal</div>
+    <div class="one">One</div>
+    <div class="two">Two</div>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+            flex-direction: column;
+        }
+        .container {
+            width: 800px;
+        }
+        div {
+            background-color: #ddd;
+            text-align: center;
+            padding: 15px;
+            font-weight: bold;
+            float: left;
+            margin-left: 15px;
+            margin-top: 15px;
+        }
+        .full {
+            width: 100%;
+            margin-left: 0 !important;
+        }
+        .triple {
+            width: calc((100% - 150px)/3);
+        }
+        .half {
+            width: calc((100% - 105px)/2);
+        }
+        .qarter {
+            width: calc((100% - 195px)/4);
+        }
+        .clear {
+            clear: both;
+        }
+        .normal {
+            margin: 20px auto;
+            width: 300px;
+            font-weight: bold;
+            font-size: 1rem;
+            padding: 20px;
+            background-color: #B3B3B3; 
+            color: black;
+        }
+        .one {
+            margin: 20px auto;
+            width: 300px;
+            font-weight: bold;
+            font-size: 1rem;
+            padding: 20px;
+            background-color: #B3B3B3; 
+            color: black;
+            opacity: 0.5;
+        }
+        .two {
+            margin: 20px auto;
+            width: 300px;
+            font-weight: bold;
+            font-size: 1rem;
+            padding: 20px;
+            background-color: #B3B3B3; 
+            color: black;
+            opacity: 0.1;
+        }
+    </style>
+</body>
+</html>

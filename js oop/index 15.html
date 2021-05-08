@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="parent">will go up on hover in half second
+        <div class="child">will go down after half second</div>
+    </div>
+    <div class="vip" style="
+            background-color: red;
+            color: white;
+            padding: 20px;
+            border: 1px solid blue;
+            font-size: 80px;">
+            Hello Div
+    </div>
+    <div class="shape-3">Element</div>
+    <div class="shape-3">Element</div>
+    <div class="shape-3">Element</div>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-transform: capitalize;
+            font-family: sans-serif;
+        }
+        :root {
+            --mainColor: #009688;
+            --mainPadding: 10px;
+        }
+        .shape-3 {
+            --mainColor: #ff0000;
+            --mainPadding: 10px;
+            width: 400px;
+            margin: 5px;
+            color: var(--mainColor);
+            padding: var(--mainPadding);
+            border: 2px solid black;
+        }
+        .vip {
+            width: 400px;
+            margin: 20px auto;
+            padding: 0 !important;
+            text-align: center;
+            position: relative;
+            visibility: hidden;
+            border: none !important;
+            font-size: 20px !important;
+        }
+        .vip::after {
+            width: 100%;
+            height: 100%;
+            padding: 10px !important;
+            background-color: #EEEEEE !important;
+            color: black !important;
+            content: "el zero";
+            visibility: visible;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .parent {
+            width: 400px;
+            height: 150px;
+            margin: auto;
+            margin-top: 50px;
+            padding: 20px;
+            background-color: #F2F2F4;
+            font-size: 20px;
+            font-family: sans-serif;
+            text-transform: capitalize;
+            text-align: center;
+            transition: margin-top 0.5s linear;
+        }
+        .parent:hover {
+            margin-top: 0;
+        }
+        .parent:hover .child {
+            margin-top: 20px;
+        }
+        .child {
+            padding: 30px;
+            background-color: #DEDEDC;
+            transition: margin-top 0.5s linear;
+            transition-delay: 0.5s;
+        }
+    </style>
+</body>
+</html>
